@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  cassandra:
+    image: 'bitnami/cassandra:3'
+    container_name: ejc-cassandra
+    ports:
+      - '7000:7000'
+      - '9042:9042'
+    volumes:
+      #- ./target/cassandra_data:/bitnami
+      - ./src/main/docker:/docker-entrypoint-initdb.d
+    environment:
+      - CASSANDRA_SEEDS=cassandra
+      - CASSANDRA_PASSWORD_SEEDER=yes
+      - CASSANDRA_PASSWORD=cassandra
