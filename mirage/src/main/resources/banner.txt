@@ -1,8 +1,19 @@
-  ______     _  _____            __  __ _
- |  ____|   | |/ ____|          |  \/  (_)
- | |__      | | |       ______  | \  / |_ _ __ __ _  __ _  ___
- |  __| _   | | |      |______| | |\/| | | '__/ _` |/ _` |/ _ \
- | |___| |__| | |____           | |  | | | | | (_| | (_| |  __/
- |______\____/ \_____|          |_|  |_|_|_|  \__,_|\__, |\___|
-                                                     __/ |
-                                                    |___/
+
+             .,lxxxxl,':dxxxd:.   .:llll;   ;llllllllc;.      .,ldxkxxoc.       .:odxkxd:.     .;clollll'
+            .dNMMMMMMNNWMMMMMWO'  '0MMMMk. .kMMMMMMMMMWKd.   'kNMMMMMMMWK:    ,xXWMMMMMMO.   .lKWMMMMMMWl
+            :XMMMMWWMMMMWWWMMMWo  ,0MMMMk. .kMMMMW0KWMMMWx..:kWMMMWXNMMMM0'  cXMMMMWXOO0d.   ;XMMMMN0kkx;
+            cNMMMW0KMMMMX0NMMMWd. '0MMMMk. .kMMMMK::KMMMM0',xKMMMMO:kMMMMK; ;KMMMMXo'....    cNMMMMKl;;'.
+            cNMMMNlcMMMMlcXMMMWd. '0MMMMk. .kMMMMNKKWMMMNo.,xKMMMMOlOMMMMK, oWMMMWd..okkkkd' :NMMMMMWWW0,
+            cNMMMWl;MMMMl;XMMMWd. ,0MMMMk. .kMMMMMMMMMMXl. ,xKMMMMWWWMMMMK; lNMMMWd.'0MMMMWk':NMMMMKkxxl.
+            cNMMMWl;MMMMl;XMMMWd. '0MMMMk. .kMMMMWNWMMMNl  ,xKMMMMWWWMMMMK; 'OMMMMXd:ckNMMMK;:XMMMWk,....
+            cNMMMWl;MMMMl;XMMMWd. '0MMMMk. .kMMMMKdOWMMMX: ,xKMMMMOlOMMMMK;  ,kWMMMWNKXWMMWd.,0MMMMWNXXKc
+            cXWWWNl;WWWWl;KWWWNd. 'OWWWWk. .kWWWW0,,0WWWW0,;x0WWWWx,xWWWW0,   .:kXWMMMMWNOc.  ,dKNWWWWWNl
+            .,,,,,..,,,,'.',,,,.   ',,,,.   .,,,,'  .,,,,,...',,,,. .,,,,'.      .,:ccc;'.      ..,,,,,,.
+
+
+             ...................   ......   ......  ......  ....... ......       ..''''...      ........
+            :KXXXKxkXXXXOx0XXXXo. 'kXXXXx. .dXXXXOcl0XXX0l.,dOXXXXx:xXXXXO,  .cdOKXX00KXX0x;..lk0XXKOOOk;
+            cNMMMWk0MMMMKkXMMMWd. '0MMMMk. .kMMMMWNWMMMNx. ,xKMMMMNKNMMMMK; ;0WMMWO:;xKWWWWk':XMMMWKxddo.
+            cNMMMW0KMMMMX0NMMMWd. '0MMMMk. .kMMMMNkkNMMMNx.,d0MMMM0d0MMMMK, :KWMMW0c;lodo:,. :XMMMMNOkko.
+            .dKXNNNNXK0XNNNWNXk,  'kXXNXx. .xXNNXX00XXKOd;  .;xKXNNXXNNXOc.  .cx0XNNX000d.   .oOKXXX0OOk;
+              ..',,'....'',''.     ......   ...........        ..',,,''.        ...',,,'.       .........
