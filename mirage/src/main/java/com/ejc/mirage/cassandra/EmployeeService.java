@@ -35,7 +35,7 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
-    public void deleteAllEmployees() {
-        employeeRepository.deleteAll();
+    public Mono<Void> deleteAllEmployees() {
+        return employeeRepository.deleteAll();
     }
 }
