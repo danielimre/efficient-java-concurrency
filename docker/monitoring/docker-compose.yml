@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  zipkin:
+    image: openzipkin/zipkin-slim:latest
+    container_name: ejc-zipkin
+    ports:
+      - 9411:9411
+
+  grafana:
+    image: bitnami/grafana:latest
+    container_name: ejc-grafana
+    depends_on:
+      - influxdb
+    ports:
+      - 3000:3000
+    volumes:
+    - ./data/grafana:/opt/bitnami/grafana/data
+
+  influxdb:
+    image: bitnami/influxdb:latest
+    container_name: ejc-influxdb
+    environment:
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_USER_PASSWORD=admin
+      - INFLUXDB_DB=ejc_database
+      - INFLUXDB_USER=user
+      - INFLUXDB_USER_PASSWORD=user
+    ports:
+      - 8086:8086
+    volumes:
+      - ./data/influxdb:/bitnami/influxdb

@@ -6,8 +6,8 @@ import io.micrometer.core.instrument.Clock;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Tag;
 import io.micrometer.core.instrument.config.NamingConvention;
-import io.micrometer.graphite.GraphiteConfig;
-import io.micrometer.graphite.GraphiteMeterRegistry;
+import io.micrometer.influx.InfluxConfig;
+import io.micrometer.influx.InfluxMeterRegistry;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryCustomizer;
 import org.springframework.boot.actuate.metrics.web.reactive.server.WebFluxTags;
@@ -26,8 +26,8 @@ public class MetricsConfiguration implements WebFluxTagsProvider {
     private String appEnvironment;
 
     @Bean
-    public GraphiteMeterRegistry graphiteMeterRegistry(GraphiteConfig config, Clock clock) {
-        var meterRegistry = new GraphiteMeterRegistry(config, clock);
+    public InfluxMeterRegistry graphiteMeterRegistry(InfluxConfig config, Clock clock) {
+        var meterRegistry = new InfluxMeterRegistry(config, clock);
         meterRegistry.config().namingConvention(NamingConvention.dot);
         return meterRegistry;
     }

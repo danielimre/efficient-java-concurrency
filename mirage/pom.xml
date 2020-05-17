@@ -16,7 +16,7 @@
   <description>WebService with some tricks</description>
 
   <properties>
-    <java.version>13</java.version>
+    <java.version>14</java.version>
     <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
   </properties>
 
@@ -73,7 +73,7 @@
     </dependency>
     <dependency>
       <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-registry-graphite</artifactId>
+      <artifactId>micrometer-registry-influx</artifactId>
     </dependency>
   </dependencies>
 
