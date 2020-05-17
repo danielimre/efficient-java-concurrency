@@ -30,4 +30,12 @@ public class EmployeeService {
     public Mono<Employee> getEmployeeById(int id) {
         return employeeRepository.findById(id);
     }
+
+    public Mono<Employee> addEmployee(Employee employee) {
+        return employeeRepository.save(employee);
+    }
+
+    public Mono<Void> deleteAllEmployees() {
+        return employeeRepository.deleteAll();
+    }
 }

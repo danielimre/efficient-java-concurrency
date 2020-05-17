@@ -7,8 +7,11 @@ import javax.annotation.PostConstruct;
 import com.ejc.mirage.cassandra.Employee;
 import com.ejc.mirage.cassandra.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
@@ -36,7 +39,7 @@ public class EmployeeController {
         Flux<Employee> employees = employeeService.getAllEmployees();
         return employees;
     }
-
+    
     @GetMapping("/{id}")
     public Mono<Employee> getEmployeeById(@PathVariable int id) {
         return employeeService.getEmployeeById(id);
@@ -45,5 +48,15 @@ public class EmployeeController {
     @GetMapping("/filterByAge/{age}")
     public Flux<Employee> getEmployeesFilterByAge(@PathVariable int age) {
         return employeeService.getEmployeesFilterByAge(age);
+    }
+
+    @PostMapping("/add")
+    public Mono<Employee> addEmployee(@RequestBody Employee employee) {
+        return employeeService.addEmployee(employee);
+    }
+
+    @DeleteMapping("/deleteAll")
+    public Mono<Void> deleteAllEmployees() {
+        return employeeService.deleteAllEmployees();
     }
 }
