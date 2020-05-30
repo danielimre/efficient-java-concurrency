@@ -7,15 +7,15 @@ Experiments with different Java concurrency models.
 ### Monitoring
 Start monitoring stack with:
 ```
-docker-compose -f docker-compose-monitoring.yml up
+docker-compose -f docker/monitoring/docker-compose.yml up
 ```                            
 
 Following services should be available:
-- Graphite http://localhost:80
+- InfluxDB http://localhost:8086
 - Grafana http://localhost:3000
 - Zipkin http://localhost:9411
 
-First time, set up grafana datasource: `http://graphite:80`
+First time, set up Grafana datasource: `http://localhost:8086`
 
 ### Example projects
 Start project specific stack from subprojects (e.g. under `mirage`) with:

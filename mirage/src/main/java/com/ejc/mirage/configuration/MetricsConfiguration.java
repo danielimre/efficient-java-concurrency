@@ -26,15 +26,9 @@ public class MetricsConfiguration implements WebFluxTagsProvider {
     private String appEnvironment;
 
     @Bean
-    public InfluxMeterRegistry graphiteMeterRegistry(InfluxConfig config, Clock clock) {
-        var meterRegistry = new InfluxMeterRegistry(config, clock);
-        meterRegistry.config().namingConvention(NamingConvention.dot);
-        return meterRegistry;
-    }
-
-    @Bean
-    MeterRegistryCustomizer<MeterRegistry> metricsCommonTags() {
-        return registry -> registry.config().commonTags("application", appShortName, "environment", appEnvironment, "instance", appInstance);
+    MeterRegistryCustomizer<InfluxMeterRegistry> metricsCommonTags() {
+        return registry -> registry.config()
+                .commonTags("application", appShortName, "environment", appEnvironment, "instance", appInstance);
     }
 
     @Override

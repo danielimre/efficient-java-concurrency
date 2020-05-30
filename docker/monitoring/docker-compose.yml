@@ -21,11 +21,11 @@ services:
     image: bitnami/influxdb:latest
     container_name: ejc-influxdb
     environment:
-      - INFLUXDB_ADMIN_USER=admin
-      - INFLUXDB_ADMIN_USER_PASSWORD=admin
-      - INFLUXDB_DB=ejc_database
-      - INFLUXDB_USER=user
-      - INFLUXDB_USER_PASSWORD=user
+      INFLUXDB_ADMIN_USER: admin
+      INFLUXDB_ADMIN_USER_PASSWORD: admin
+      INFLUXDB_DB: ejc_database
+      INFLUXDB_USER: user
+      INFLUXDB_USER_PASSWORD: user
     ports:
       - 8086:8086
     volumes:
