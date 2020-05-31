@@ -2,12 +2,8 @@ package com.ejc.mirage.configuration;
 
 import java.util.Arrays;
 
-import io.micrometer.core.instrument.Clock;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Tag;
-import io.micrometer.core.instrument.config.NamingConvention;
-import io.micrometer.influx.InfluxConfig;
-import io.micrometer.influx.InfluxMeterRegistry;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryCustomizer;
 import org.springframework.boot.actuate.metrics.web.reactive.server.WebFluxTags;
@@ -26,9 +22,9 @@ public class MetricsConfiguration implements WebFluxTagsProvider {
     private String appEnvironment;
 
     @Bean
-    MeterRegistryCustomizer<InfluxMeterRegistry> metricsCommonTags() {
+    MeterRegistryCustomizer<MeterRegistry> metricsCommonTags() {
         return registry -> registry.config()
-                .commonTags("application", appShortName, "environment", appEnvironment, "instance", appInstance);
+            .commonTags("application", appShortName, "environment", appEnvironment, "node", appInstance);
     }
 
     @Override

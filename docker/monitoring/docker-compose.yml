@@ -11,11 +11,29 @@ services:
     image: bitnami/grafana:latest
     container_name: ejc-grafana
     depends_on:
+      - prometheus
       - influxdb
     ports:
       - 3000:3000
     volumes:
     - ./data/grafana:/opt/bitnami/grafana/data
+
+  prometheus:
+    image: bitnami/prometheus:latest
+    container_name: ejc-prometheus
+    depends_on:
+      - prometheus-pushgateway
+    ports:
+      - 9090:9090
+    volumes:
+      - ./data/prometheus:/opt/bitnami/prometheus/data
+      - ./config/prometheus:/opt/bitnami/prometheus/conf
+
+  prometheus-pushgateway:
+    image: prom/pushgateway:latest
+    container_name: ejc-prometheus-pushgateway
+    ports:
+      - 9091:9091
 
   influxdb:
     image: bitnami/influxdb:latest
