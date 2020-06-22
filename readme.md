@@ -11,6 +11,7 @@ docker-compose -f docker/monitoring/docker-compose.yml up
 ```                            
 
 Following services should be available:
+- InfluxDB http://localhost:8086
 - Prometheus http://localhost:9090
 - Prometheus Pushgateway http://localhost:9091
 - Grafana http://localhost:3000
