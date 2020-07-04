@@ -1,0 +1,7 @@
+{
+  "id": ${id},
+  "name": "${name}",
+  "address": "${address}",
+  "email": "${email}",
+  "age": ${age}
+}
