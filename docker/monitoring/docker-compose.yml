@@ -17,6 +17,7 @@ services:
       - 3000:3000
     volumes:
     - ./data/grafana:/opt/bitnami/grafana/data
+    - ./config/grafana/dashboards:/opt/bitnami/grafana/dashboards
 
   prometheus:
     image: bitnami/prometheus:latest
